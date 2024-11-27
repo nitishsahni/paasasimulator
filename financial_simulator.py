@@ -29,13 +29,12 @@ else:
     st.image(dark_logo, width=100)   # Adjust the size as needed
 
 # Title
-st.title("Simulator")
 st.write("Track your progress toward financial goals by adjusting your assumptions in the sidebar.")
 
 # Add preset scenarios
-st.sidebar.subheader("Preset Scenarios")
+st.sidebar.subheader("Simulator")
 preset = st.sidebar.selectbox(
-    "Select a Financial Goal",
+    "Select a Goal Template",
     ["Custom", "Education", "EB-5 Visa", "Property", "Retiring Abroad"]
 )
 
