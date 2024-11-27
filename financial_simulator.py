@@ -18,7 +18,10 @@ light_logo = Image.open("paasa_logo_black.png")  # Light mode logo
 dark_logo = Image.open("paasa_logo.png")   # Dark mode logo
 
 # Get the current theme
-theme = st_theme().get('base')
+try:
+    theme = st_theme().get('base')
+except:
+    theme = "light"
 
 
 # Display the appropriate logo based on the theme
