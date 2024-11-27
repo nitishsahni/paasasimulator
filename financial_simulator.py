@@ -2,6 +2,7 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 from PIL import Image
+from streamlit_theme import st_theme
 
 
 # Set the page configuration with sidebar default open
@@ -13,8 +14,19 @@ st.set_page_config(
 )
 
 # Load and Display the Logo on the Main Page
-logo = Image.open("paasa_logo.png")  # Replace with your actual logo path
-st.image(logo, width=100)  # Adjust the size as needed
+light_logo = Image.open("paasa_logo_black.png")  # Light mode logo
+dark_logo = Image.open("paasa_logo.png")   # Dark mode logo
+
+# Get the current theme
+theme = st_theme()
+
+print(theme)
+
+# Display the appropriate logo based on the theme
+if theme['base'] == "light":
+    st.image(light_logo, width=100)  # Adjust the size as needed
+else:
+    st.image(dark_logo, width=100)   # Adjust the size as needed
 
 # Title
 st.title("Simulator")
