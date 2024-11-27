@@ -18,12 +18,11 @@ light_logo = Image.open("paasa_logo_black.png")  # Light mode logo
 dark_logo = Image.open("paasa_logo.png")   # Dark mode logo
 
 # Get the current theme
-theme = st_theme()
+theme = st_theme().get('base')
 
-print(theme)
 
 # Display the appropriate logo based on the theme
-if theme['base'] == "light":
+if theme == "light":
     st.image(light_logo, width=100)  # Adjust the size as needed
 else:
     st.image(dark_logo, width=100)   # Adjust the size as needed
