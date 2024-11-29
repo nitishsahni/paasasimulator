@@ -35,6 +35,7 @@ st.write("Track your progress toward financial goals by adjusting your assumptio
 
 # Add preset scenarios
 st.sidebar.subheader("Simulator")
+st.sidebar.write("Enter your current savings, monthly contributions, and expected returns to see your projected balance, adjusted for inflation.")
 preset = st.sidebar.selectbox(
     "Select a Goal Template",
     ["Custom", "Education", "EB-5 Visa", "Property", "Retiring Abroad"]
